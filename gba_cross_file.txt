@@ -1,0 +1,8 @@
+[binaries]
+c = 'arm-none-eabi-gcc'
+
+[host_machine]
+system = ''
+cpu_family = 'arm'
+cpu = 'arm'
+endian = 'little'
