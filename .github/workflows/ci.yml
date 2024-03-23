@@ -9,11 +9,13 @@ on:
 jobs:
   install_project:
     runs-on: ubuntu-latest
+    container: gcc:11.4
     steps:
     - uses: actions/checkout@v4
     - name: Build Source
       run: |
-        apt-get install meson ninja-build gcc-11
+        apt-get update
+        apt-get -y install build-essential meson ninja-build
         meson setup build
         meson compile -C build
 
