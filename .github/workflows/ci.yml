@@ -15,8 +15,8 @@ jobs:
     - name: Build Source
       run: |
         apt-get update
-        apt-get -y install build-essential meson ninja-build
-        meson setup build
+        apt-get -y install build-essential meson ninja-build gcc-arm-none-eabi
+        meson setup build --cross-file gba_cross_file.txt
         meson compile -C build
 
 
